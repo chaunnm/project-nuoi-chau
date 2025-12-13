@@ -46,30 +46,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }}</title>
-    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}" type="image/png">
+
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Tailwind & Swiper -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}" type="image/png">
+
+    <!-- Custom styles & scripts -->
+    <link rel="stylesheet" href="{{ '/styles/main.css' | relative_url }}">
+    <script defer src="{{ '/scripts/main.js' | relative_url }}"></script>
+
+    <!-- Music -->
     <audio id="backgroundMusic" autoplay loop>
         <source src="{{ '/assets/audio/audio.mp3' | relative_url }}" type="audio/mpeg">
         Trình duyệt của bạn không hỗ trợ audio.
     </audio>
-    <link rel="stylesheet" href="{{ '/styles/main.css' | relative_url }}">
-    <script src="{{ '/scripts/main.js' | relative_url }}"></script>
 </head>
 
 <body class="bg-pink-50 text-gray-900 overflow-x-hidden">
     <div id="snow-container"></div>
+
     {% include navbar.html %}
-
-    {{ content }}
-
+    {% include hero.html %}
+    {% include letter.html %}
+    {% include pricing.html %}
+    {% include transparency.html %}
+    {% include reviews.html %}
+    {% include hall-of-fame.html %}
     {% include footer.html %}
     {% include donate.html %}
 
+    <!-- Custom JS -->
     <script src="{{ '/scripts/snow.js' | relative_url }}"></script>
     <script src="{{ '/scripts/donate.js' | relative_url }}"></script>
     <script src="{{ '/scripts/energy.js' | relative_url }}"></script>
