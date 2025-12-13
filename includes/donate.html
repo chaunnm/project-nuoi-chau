@@ -52,7 +52,7 @@
                     </div>
 
                     <!-- Ảnh chính -->
-                    <img src="/assets/images/qrmomo.jpg"
+                    <img src="{{ site.baseurl }}/assets/images/qrmomo.jpg"
                         onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=ChucMungGiangSinh'; this.parentElement.insertAdjacentHTML('beforeend', '<p class=\'text-red-500 text-xs mt-1\'>Lưu ý: Hãy đảm bảo file ảnh tên là <b>qrmomo.jpg</b> nằm cùng thư mục nhé!</p>')"
                         alt="QR Code Momo"
                         class="relative w-full rounded-xl shadow-2xl border-4 border-white object-cover transform transition group-hover:scale-[1.02]" />
