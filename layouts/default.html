@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title | default: "Dự Án Nuôi Châu - Phiên Bản Giáng Sinh" }}</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/png">
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="/assets/audio/audio.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+    <link rel="stylesheet" href="{{ '/styles/main.css' | relative_url }}">
+    <script src="{{ '/scripts/main.js' | relative_url }}"></script>
+</head>
+
+<body class="bg-pink-50 text-gray-900 overflow-x-hidden">
+    <div id="snow-container"></div>
+    {% include navbar.html %}
+    {% include hero.html %}
+    {% include letter.html %}
+    {% include pricing.html %}
+    {% include transparency.html %}
+    {% include reviews.html %}
+    {% include hall-of-fame.html %}
+    {% include footer.html %}
+    {% include donate.html %}
+
+    <script src="/scripts/snow.js"></script>
+    <script src="/scripts/donate.js"></script>
+    <script src="/scripts/energy.js"></script>
+    <script src="/scripts/swiper-init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<section class="pt-40 pb-20 px-4 text-center bg-gradient-to-b from-white via-red-50 to-white relative overflow-hidden">
+    <!-- Decor blobs -->
+    <div class="absolute top-20 left-10 text-6xl opacity-20 rotate-12 animate-pulse">
+        🎄
+    </div>
+    <div class="absolute bottom-10 right-10 text-8xl opacity-20 -rotate-12 animate-bounce">
+        🎁
+    </div>
+
+    <div class="container mx-auto max-w-4xl relative z-10">
+        <span
+            class="bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4 inline-block shadow-md">
+            🎄 Chiến dịch: Cứu đói mùa Giáng Sinh
+        </span>
+        <div class="relative inline-block">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Hãy trao cho Châu <br />
+                <span class="text-brand-red font-hand">Một cốc cacao nóng</span>
+            </h1>
+            <!-- Santa Hat Decor -->
+            <img src="https://api.iconify.design/noto:christmas-tree.svg"
+                class="absolute -top-10 -right-10 w-20 h-20 opacity-80 hidden md:block" alt="Tree" />
+        </div>
+
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Noel này Châu không cô đơn, nhưng Châu không muốn bị đói. Hãy giúp Châu
+            có sức lực để chạy deadline xuyên đêm Giáng Sinh.
+        </p>
+
+        <!-- Real-time Status (Đã Nâng Cấp) -->
+        <div
+            class="bg-white p-6 rounded-2xl shadow-xl max-w-lg mx-auto mb-10 border-4 border-brand-red/20 relative group hover:border-brand-red transition duration-500">
+            <!-- Nơ trang trí -->
+            <div class="absolute -top-4 -left-4 text-4xl transform -rotate-45 z-10 filter drop-shadow-md">
+                🎀
+            </div>
+
+            <!-- Header: Tiêu đề + % -->
+            <div class="flex justify-between items-end mb-3">
+                <span class="font-bold text-gray-700 flex items-center gap-2">
+                    <i class="fas fa-heartbeat text-brand-red animate-pulse text-xl"></i>
+                    Chỉ số sinh tồn:
+                </span>
+                <span class="font-extrabold text-2xl transition-all duration-500 text-brand-red"
+                    id="status-percent">15%</span>
+            </div>
+
+            <!-- Thanh năng lượng -->
+            <div
+                class="w-full h-8 bg-gray-200 rounded-full overflow-visible border border-gray-300 relative shadow-inner">
+                <!-- The Bar -->
+                <div id="energy-bar"
+                    class="h-full bg-brand-red rounded-full flex items-center justify-end pr-0 transition-all duration-1000 relative candy-cane-bar"
+                    style="width: 15%">
+                    <!-- Icon cuộn trên đầu thanh (position absolute để nó nằm đè lên mép phải) -->
+                    <div
+                        class="absolute -right-4 -top-2 bg-white rounded-full w-8 h-8 flex items-center justify-center text-sm shadow-md border-2 border-brand-red z-10 animate-bounce">
+                        <i class="fas fa-sleigh" id="bar-icon"></i>
+                        <!-- Icon xe trượt tuyết -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dòng cập nhật tâm trạng -->
+            <div class="mt-4 text-center h-8 overflow-hidden relative border-t border-dashed border-gray-200 pt-3">
+                <p id="dynamic-status"
+                    class="text-sm font-bold text-gray-500 italic transition-all duration-500 transform translate-y-0 flex items-center justify-center gap-2">
+                    <i class="fas fa-spinner fa-spin text-xs"></i> "Đang đo độ đói..."
+                </p>
+            </div>
+
+            <!-- Time counter nhỏ xíu -->
+            <div class="absolute bottom-1 right-3 text-[10px] text-gray-400 font-mono">
+                Cập nhật sau:
+                <span id="next-update" class="font-bold text-brand-red">30</span>s
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <button onclick="openCustomInput()"
+                class="bg-brand-green text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-green-900/20 hover:-translate-y-1 transition hover:bg-green-700">
+                <i class="fas fa-snowflake mr-2"></i> Sưởi ấm tim Châu
+            </button>
+            <a href="#ve-du-an"
+                class="bg-white text-gray-700 border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-brand-red hover:text-brand-red transition">
+                Tại sao lại thế?
+            </a>
+        </div>
+    </div>
+</section>

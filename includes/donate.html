@@ -1,0 +1,96 @@
+<div id="donateModal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
+    <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl w-11/12 max-w-md overflow-hidden animate-[fadeIn_0.3s_ease-out]">
+        <div class="bg-brand-red p-4 text-white text-center relative overflow-hidden">
+            <!-- Decor bg -->
+            <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/snow.png')]">
+            </div>
+            <h3 class="text-xl font-bold relative z-10">Cổng Nhận Quà Noel</h3>
+            <button onclick="closeModal()" class="absolute top-4 right-4 hover:text-gray-200 text-xl z-10">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- STEP 1: Input -->
+        <div id="modal-step-input" class="p-8 hidden">
+            <div class="text-center mb-6">
+                <div class="text-5xl mb-4">🎅</div>
+                <h4 class="text-xl font-bold text-gray-800">
+                    Bạn muốn lì xì bao nhiêu?
+                </h4>
+                <p class="text-gray-500 text-sm mt-2">1 tỷ hả</p>
+            </div>
+            <input type="number" id="customAmountInput" placeholder="Ví dụ: 50,000"
+                class="w-full text-2xl font-bold text-center border-b-2 border-brand-red focus:outline-none py-2 mb-6 text-brand-red"
+                onkeypress="if(event.key==='Enter') submitCustomAmount()" />
+            <button onclick="submitCustomAmount()"
+                class="w-full bg-brand-red text-white py-3 rounded-xl font-bold text-lg hover:bg-red-800 transition shadow-lg">
+                Tiếp Tục <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+
+        <!-- STEP 2: Quote -->
+        <div id="modal-step-quote" class="p-8 hidden flex flex-col items-center justify-center min-h-[300px] bg-red-50">
+            <div class="text-6xl mb-6 animate-bounce">🦌</div>
+            <div id="quote-text" class="text-xl font-bold text-center text-gray-800 leading-relaxed italic animate-pop">
+                "Loading lời cảm ơn..."
+            </div>
+            <p class="text-xs text-gray-400 mt-8 animate-pulse">
+                Đang mở túi quà...
+            </p>
+        </div>
+
+        <!-- STEP 3: QR -->
+        <div id="modal-step-qr" class="hidden">
+            <div class="p-6 text-center">
+                <!-- Khung ảnh QR -->
+                <div class="relative w-full max-w-sm mx-auto mb-4 group">
+                    <!-- Decor nền hồng phía sau -->
+                    <div
+                        class="absolute inset-0 bg-pink-400 rounded-xl transform rotate-2 opacity-20 group-hover:rotate-3 transition">
+                    </div>
+
+                    <!-- Ảnh chính -->
+                    <img src="/assets/images/qrmomo.jpg"
+                        onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=ChucMungGiangSinh'; this.parentElement.insertAdjacentHTML('beforeend', '<p class=\'text-red-500 text-xs mt-1\'>Lưu ý: Hãy đảm bảo file ảnh tên là <b>qrmomo.jpg</b> nằm cùng thư mục nhé!</p>')"
+                        alt="QR Code Momo"
+                        class="relative w-full rounded-xl shadow-2xl border-4 border-white object-cover transform transition group-hover:scale-[1.02]" />
+
+                    <!-- Nơ trang trí -->
+                    <div class="absolute -top-5 -right-5 text-4xl animate-bounce z-20">
+                        🎀
+                    </div>
+                </div>
+
+                <!-- Caption theo ảnh -->
+                <p class="text-brand-red font-bold text-lg mb-1 font-hand">
+                    "Để đàn em ở đây và không nói gì!!"
+                </p>
+                <p class="text-gray-400 text-xs italic mb-4">
+                    (Mèo méo meo mèo meo...)
+                </p>
+
+                <!-- Phần STK cập nhật -->
+                <div class="bg-pink-50 rounded-xl p-4 mb-4 border border-pink-100">
+                    <label class="block text-xs font-bold text-pink-500 uppercase tracking-wide mb-1">MOMO / Ngân
+                        Hàng</label>
+                    <div class="flex items-center gap-2 bg-white rounded-lg p-2 border border-pink-200">
+                        <span class="text-2xl">🏦</span>
+                        <input type="text" value="xxxx.xxxx.251" readonly
+                            class="w-full bg-transparent border-none font-mono text-center text-lg font-bold text-gray-800 focus:outline-none"
+                            id="stkInput" />
+                        <button onclick="copyToClipboard()"
+                            class="bg-pink-500 text-white w-8 h-8 rounded-full hover:bg-pink-600 transition flex items-center justify-center shadow-sm"
+                            title="Copy">
+                            <i class="far fa-copy text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <p id="copyMsg" class="text-green-600 text-xs font-bold hidden mb-2 animate-bounce">
+                    <i class="fas fa-check"></i> Đã copy STK! Ting ting ngay đi!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

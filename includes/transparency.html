@@ -1,0 +1,76 @@
+<section id="minh-bach" class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-brand-red">
+            Báo cáo tài chính minh bạch
+        </h2>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+            <!-- Chart Container -->
+            <div
+                class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 w-full max-w-2xl flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+                <!-- Background decor dots -->
+                <div class="absolute top-0 left-0 w-full h-full opacity-10" style="
+                background-image: radial-gradient(#ccc 1px, transparent 1px);
+                background-size: 20px 20px;
+              "></div>
+
+                <!-- Biểu đồ -->
+                <div class="relative w-48 h-48 flex-shrink-0 z-10">
+                    <!-- Vòng tròn biểu đồ: Hồng (70%), Cam (20%), Tím (10%) -->
+                    <div class="w-full h-full rounded-full shadow-lg" style="
+                  background: conic-gradient(
+                    #f43f5e 0% 70%,
+                    #f97316 70% 90%,
+                    #a855f7 90% 100%
+                  );
+                "></div>
+                    <!-- Lỗ tròn ở giữa tạo hiệu ứng Doughnut -->
+                    <div
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white rounded-full flex items-center justify-center text-center shadow-inner z-20">
+                        <span class="text-gray-500 font-bold text-sm leading-tight">Tổng chi<br />tháng này</span>
+                    </div>
+                </div>
+
+                <!-- Chú thích (Legend) -->
+                <div class="flex-grow text-left w-full z-10">
+                    <div class="space-y-4">
+                        <!-- Item 1 -->
+                        <div class="flex items-center justify-between border-b border-gray-50 pb-2">
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#F43F5E] shadow-sm"></span>
+                                <!-- Màu hồng đậm -->
+                                <span class="font-bold text-gray-700">Trả nợ đại ka, bạn bè</span>
+                            </div>
+                            <span class="font-bold text-gray-900">70%</span>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex items-center justify-between border-b border-gray-50 pb-2">
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#F97316] shadow-sm"></span>
+                                <!-- Màu cam -->
+                                <span class="font-bold text-gray-700">Ăn uống & Trà sữa</span>
+                            </div>
+                            <span class="font-bold text-gray-900">20%</span>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex items-center justify-between border-b border-gray-50 pb-2">
+                            <div class="flex items-center gap-3">
+                                <span class="w-4 h-4 rounded-full bg-[#A855F7] shadow-sm"></span>
+                                <!-- Màu tím -->
+                                <span class="font-bold text-gray-700">Đầu tư tương lai (Vietlott)</span>
+                            </div>
+                            <span class="font-bold text-gray-900">10%</span>
+                        </div>
+                    </div>
+
+                    <!-- Ghi chú footer -->
+                    <div class="mt-6 pt-2 text-gray-400 text-sm italic text-center md:text-left">
+                        *Số liệu được kiểm toán bởi... chính Châu.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
