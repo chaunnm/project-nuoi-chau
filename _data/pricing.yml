@@ -1,0 +1,41 @@
+title: "🎁 Các Gói Quà Giáng Sinh"
+subtitle: "Chọn hộp quà bạn muốn gửi tặng"
+tiers:
+  - name: "Gói Kẹo Gậy"
+    price: "20.000đ"
+    icon: "🍬"
+    note: "Đủ mua một chiếc bánh gừng hoặc ly cà phê giữ tỉnh táo."
+    button_label: "Tặng Kẹo"
+    button_action: "20k"
+    color: "gray"
+    highlight: false
+
+  - name: "Gói No Ấm"
+    price: "60.000đ"
+    icon: "🎅"
+    note: "Một bát phở nóng hổi hoặc combo gà rán Giáng Sinh."
+    button_label: "Tặng Ngay"
+    button_action: "60k"
+    color: "red"
+    highlight: true
+    features:
+      - Châu ấm bụng
+      - Chúc Giáng sinh trên Story
+
+  - name: "Gói Người Tuyết"
+    price: "200.000đ"
+    icon: "⛄"
+    note: "Một bữa lẩu cô đơn nhưng sang chảnh."
+    button_label: "Tặng Lẩu"
+    button_action: "200k"
+    color: "gold"
+    highlight: false
+
+  - name: "Gói Tuần Lộc"
+    price: "500k++"
+    icon: ""
+    note: "Bạn chính là Santa Claus đời thực của tôi!"
+    button_label: "Trở thành Santa"
+    button_action: "500k"
+    color: "green"
+    highlight: false

@@ -227,3 +227,10 @@ body {
   display: inline-block;
   animation: marquee 15s linear infinite;
 }
+
+.light-rope li:nth-child(even) {
+  transform: translateY(4px);
+}
+.light-rope li:nth-child(odd) {
+  transform: translateY(-2px);
+}

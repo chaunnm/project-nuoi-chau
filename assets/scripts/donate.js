@@ -67,12 +67,4 @@
       document.getElementById("copyMsg").classList.remove("hidden");
     });
   };
-
-  window.openDonateModal = function () {
-    document.getElementById("donationModal").classList.remove("hidden");
-  };
-
-  window.closeDonateModal = function () {
-    document.getElementById("donationModal").classList.add("hidden");
-  };
 })();

@@ -1,0 +1,12 @@
+{% assign lights = "red-500,yellow-300,green-400,blue-400,pink-400" | split: "," %}
+{% assign repeat = (1..5) %}
+
+<ul class="light-rope fixed top-[70px] left-0 w-full flex justify-center gap-3 z-[999] pointer-events-none">
+    {% for _ in repeat %}
+    {% for color in lights %}
+    <li class="w-3 h-6 rounded-full bg-{{ color }} animate-pulse"
+        style="animation-delay: {{ forloop.index0 | plus: forloop.parentloop.index0 | times: 120 }}ms">
+    </li>
+    {% endfor %}
+    {% endfor %}
+</ul>

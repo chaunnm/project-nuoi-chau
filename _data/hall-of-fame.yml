@@ -1,0 +1,23 @@
+- icon: "💔"
+  name: "Người Yêu Cũ"
+  amount: "+5.000đ"
+  amountClass: "text-brand-green"
+  quote: "Chia tay rồi nhưng thấy tội nên cho 5k."
+
+- icon: "👩"
+  name: "Mẹ (đã chặn)"
+  amount: "+500.000đ"
+  amountClass: "text-brand-green"
+  quote: "Gửi tiền về quê đi con, ở đó mà xin."
+
+- icon: "🐶"
+  name: "Bạn thân"
+  amount: "-50.000đ"
+  amountClass: "text-brand-red"
+  quote: "Trả tao 50k hôm qua vay coi."
+
+- icon: "🏠"
+  name: "Chủ trọ"
+  amount: "0đ"
+  amountClass: "text-gray-400"
+  quote: "Tháng này đóng tiền chưa em?"

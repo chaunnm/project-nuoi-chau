@@ -1,104 +1,66 @@
 <section id="goi-tai-tro" class="py-20 bg-gray-900 text-white relative overflow-hidden">
-    <!-- Tuyết nền tối -->
-    <div class="absolute inset-0 opacity-10" style="
-          background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPgo8L3N2Zz4=');
-        "></div>
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml;base64,...');"></div>
 
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-gold">
-                🎁 Các Gói Quà Giáng Sinh
-            </h2>
-            <p class="text-gray-400">Chọn hộp quà bạn muốn gửi tặng</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-gold">{{ site.data.pricing.title }}</h2>
+            <p class="text-gray-400">{{ site.data.pricing.subtitle }}</p>
         </div>
 
         <div class="grid md:grid-cols-4 gap-6 mb-8">
-            <!-- Tier 1 -->
-            <div
-                class="border border-gray-700 bg-gray-800/80 backdrop-blur rounded-2xl p-6 hover:border-brand-green transition relative flex flex-col group">
-                <div class="absolute -top-3 -right-3 text-2xl group-hover:scale-125 transition">
-                    🍬
-                </div>
-                <h3 class="text-xl font-bold text-gray-300">Gói Kẹo Gậy</h3>
-                <div class="text-3xl font-bold my-4 text-white">20.000đ</div>
-                <p class="text-sm text-gray-400 mb-6 flex-grow">
-                    Đủ mua một chiếc bánh gừng hoặc ly cà phê giữ tỉnh táo.
-                </p>
-                <button onclick="startDonation('20k')"
-                    class="w-full py-2 rounded-lg border border-gray-500 hover:bg-gray-700 transition">
-                    Tặng Kẹo
-                </button>
-            </div>
+            {% for tier in site.data.pricing.tiers %}
+            {% assign color = tier.color %}
+            {% assign is_featured = tier.highlight %}
+            <div class="border {% if color == 'red' %}border-2 border-brand-red{% elsif color == 'gold' %}border-brand-gold{% elsif color == 'green' %}border-brand-green{% else %}border-gray-700{% endif %}
+          bg-gray-800/80 backdrop-blur rounded-2xl p-6 relative flex flex-col
+          {% if is_featured %}md:-translate-y-4 shadow-2xl shadow-red-900/50{% else %}group{% endif %}
+          {% if color == 'green' %}hover:bg-green-900/20{% else %}hover:border-brand-{{ color }}{% endif %}
+          transition">
 
-            <!-- Tier 2 (Featured) -->
-            <div
-                class="border-2 border-brand-red bg-gray-800/90 backdrop-blur rounded-2xl p-6 transform md:-translate-y-4 shadow-2xl shadow-red-900/50 relative flex flex-col">
+                {% if tier.icon %}
+                <div class="absolute -top-3 -right-3 text-2xl group-hover:scale-125 transition">
+                    {{ tier.icon }}
+                </div>
+                {% endif %}
+
+                {% if is_featured %}
                 <div
                     class="absolute top-0 right-0 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                     Phổ biến nhất
                 </div>
                 <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-4xl">
-                    🎅
+                    {{ tier.icon }}
                 </div>
+                {% endif %}
 
-                <h3 class="text-xl font-bold text-brand-red mt-2">Gói No Âm</h3>
-                <div class="text-3xl font-bold my-4 text-white">60.000đ</div>
-                <p class="text-sm text-gray-300 mb-6 flex-grow">
-                    Một bát phở nóng hổi hoặc combo gà rán Giáng Sinh.
-                </p>
+                <h3
+                    class="text-xl font-bold {% if color == 'red' %}text-brand-red{% elsif color == 'gold' %}text-brand-gold{% elsif color == 'green' %}text-brand-green{% else %}text-gray-300{% endif %}">
+                    {{ tier.name }}</h3>
+                <div class="text-3xl font-bold my-4 text-white">{{ tier.price }}</div>
+                <p class="text-sm text-gray-400 mb-6 flex-grow">{{ tier.note }}</p>
+
+                {% if tier.features %}
                 <ul class="text-sm space-y-2 mb-6 text-gray-300">
+                    {% for f in tier.features %}
                     <li>
-                        <i class="fas fa-check text-brand-green mr-2"></i> Châu ấm bụng
+                        <i class="fas fa-check text-brand-green mr-2"></i> {{ f }}
                     </li>
-                    <li>
-                        <i class="fas fa-check text-brand-green mr-2"></i> Chúc Giáng
-                        sinh trên Story
-                    </li>
+                    {% endfor %}
                 </ul>
-                <button onclick="startDonation('60k')"
-                    class="w-full py-2 rounded-lg bg-brand-red hover:bg-red-700 transition font-bold text-white shadow-lg">
-                    Tặng Ngay
-                </button>
-            </div>
+                {% endif %}
 
-            <!-- Tier 3 -->
-            <div
-                class="border border-gray-700 bg-gray-800/80 backdrop-blur rounded-2xl p-6 hover:border-brand-gold transition flex flex-col group">
-                <div class="absolute -top-3 -right-3 text-2xl group-hover:scale-125 transition">
-                    ⛄
-                </div>
-                <h3 class="text-xl font-bold text-brand-gold">Gói Người Tuyết</h3>
-                <div class="text-3xl font-bold my-4 text-white">200.000đ</div>
-                <p class="text-sm text-gray-400 mb-6 flex-grow">
-                    Một bữa lẩu cô đơn nhưng sang chảnh.
-                </p>
-                <button onclick="startDonation('200k')"
-                    class="w-full py-2 rounded-lg border border-gray-500 hover:bg-gray-700 transition">
-                    Tặng Lẩu
+                <button onclick="startDonation('{{ tier.button_action }}')"
+                    class="w-full py-2 rounded-lg {% if color == 'red' %}bg-brand-red text-white font-bold hover:bg-red-700{% elsif color == 'green' %}bg-brand-green text-white font-bold hover:bg-green-700{% else %}border border-gray-500 hover:bg-gray-700{% endif %} transition">
+                    {{ tier.button_label }}
                 </button>
             </div>
-
-            <!-- Tier 4 -->
-            <div
-                class="border border-brand-green bg-gray-800/80 backdrop-blur rounded-2xl p-6 hover:bg-green-900/20 transition flex flex-col">
-                <h3 class="text-xl font-bold text-brand-green">Gói Tuần Lộc</h3>
-                <div class="text-3xl font-bold my-4 text-white">500k++</div>
-                <p class="text-sm text-gray-400 mb-6 flex-grow">
-                    Bạn chính là Santa Claus đời thực của tôi!
-                </p>
-                <button onclick="startDonation('500k')"
-                    class="w-full py-2 rounded-lg bg-brand-green text-white font-bold hover:bg-green-700 transition">
-                    Trở thành Santa
-                </button>
-            </div>
+            {% endfor %}
         </div>
 
-        <!-- Custom Amount -->
+        <!-- Hộp quà tùy tâm -->
         <div class="max-w-xl mx-auto bg-gray-800 rounded-2xl p-1 border border-gray-700 shadow-lg">
             <div class="bg-gray-900 rounded-xl p-6 text-center">
-                <h3 class="text-xl font-bold text-gray-300 mb-2">
-                    🎁 Hộp Quà Bí Mật (Tùy tâm)
-                </h3>
+                <h3 class="text-xl font-bold text-gray-300 mb-2">🎁 Hộp Quà Bí Mật (Tùy tâm)</h3>
                 <div class="flex gap-2 mt-4">
                     <input type="text" onclick="openCustomInput()" readonly placeholder="Nhập số tiền..."
                         class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none cursor-pointer hover:bg-gray-700 transition" />

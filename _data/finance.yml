@@ -1,0 +1,13 @@
+title: "Báo cáo tài chính minh bạch"
+subtitle: "Tổng chi<br />tháng này"
+note: "*Số liệu được kiểm toán bởi... chính Châu."
+chart:
+  - label: Trả nợ đại ka, bạn bè
+    percent: 70
+    color: "#f43f5e"
+  - label: Ăn uống & Trà sữa
+    percent: 20
+    color: "#f97316"
+  - label: Đầu tư tương lai (Vietlott)
+    percent: 10
+    color: "#a855f7"

@@ -8,220 +8,42 @@
             <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
         </div>
 
-
-        <!-- ✅ Swiper Grouped Reviews: 3 per slide -->
         <div class="swiper reviewSwiper pt-10">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide grid md:grid-cols-3 gap-8">
-                    <!-- Review 1 -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-purple-600 relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
-                        <div
-                            class="absolute -top-6 left-8 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm ">
-                            <i class="fas fa-mug-hot"></i>
-                        </div>
-                        <p class="text-gray-600 italic mb-6 pt-4">
-                            "Cô ấy sống nhờ cà phê và deadline. Đừng bao giờ lấy cà phê của Châu, trừ khi bạn muốn chứng
-                            kiến một
-                            cuộc
-                            đại chiến
-                            giữa con người và zombie lúc 3 giờ sáng. Một ngụm nhỏ cũng có thể kích hoạt chế độ code vô
-                            cực hoặc...
-                            shutdown toàn
-                            hệ thống.<br>
-                            Ai tốt bụng xin hãy donate cho cô ấy một ly cà phê – ít ngọt, nhiều đắng, đắng chát tận tim
-                            nhưng lại
-                            hợp
-                            khẩu vị đến
-                            lạ thường. Đó không chỉ là caffeine, mà là sức mạnh tinh thần, là nguồn sống của bao dòng
-                            code đang dở
-                            dang..."
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-                                <img src="https://api.iconify.design/noto:hot-beverage.svg" alt="Coffee"
-                                    class="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Ly Cà Phê Sáng</h4>
-                                <p class="text-xs text-gray-400">Nguồn sống mỗi ngày</p>
-                            </div>
-                        </div>
-                    </div>
+                {% assign reviews = site.data.reviews %}
 
-                    <!-- Review 2 -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-lime-500 relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
-                        <div
-                            class="absolute -top-6 left-8 w-12 h-12 bg-lime-500 rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm">
-                            <i class="fas fa-user-ninja"></i>
-                        </div>
-                        <p class="text-gray-600 italic mb-6 pt-4">
-                            "Nhỏ này code thì gà, hay lèm bèm cả ngày nhưng được cái không ngại làm phiền mình. Chuyên
-                            gia nợ task,
-                            bướng bỉnh, cứng đầu
-                            nhắc hoài không sửa.<br>
-                            Tính cách hơi ngáo ngơ, nhưng lại biết điều, biết ơn và không bao giờ quay lưng với team. Là
-                            đứa
-                            đệ mà đại ka vừa đau đầu vừa không nỡ mắng. Ai nói gì xấu về nó thì bước ra đây, viên ngọc
-                            phòng data
-                            của
-                            tui đó! Anh em nào tốt bụng thì donate cho nó vài ly cà phê, để có sức… trả nợ task!"
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-                                <img src="https://api.iconify.design/noto:ninja.svg" alt="Ninja"
-                                    class="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Đại Ka</h4>
-                                <p class="text-xs text-gray-400">Mentor truyền kỳ</p>
-                            </div>
-                        </div>
-                    </div>
+                {% for review in reviews %}
+                {% assign mod = forloop.index0 | modulo: 3 %}
 
-                    <!-- Review 3 -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-sky-500 relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
-                        <div
-                            class="absolute -top-6 left-8 w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm">
-                            <i class="fas fa-cloud-moon"></i>
-                        </div>
-                        <p class="text-gray-600 italic mb-6 pt-4">
-                            "Châu hay tâm sự với trăng mỗi đêm code tới 2 giờ sáng. Nếu bạn thấy GitHub commit lúc 3h,
-                            đó là lúc
-                            trăng
-                            đang gật
-                            gù, còn cô ấy thì vẫn chưa chịu ngủ.<br>
-                            Ngoài giờ làm việc, Châu thường đi hát để xả stress – một cách giải tỏa rất nghệ sĩ. Đừng để
-                            vẻ ngoài lơ
-                            ngơ
-                            đánh lừa
-                            bạn, nhỏ này lên sân khấu là ‘cân’ mọi thể loại từ nhạc buồn não nề tới remix quẩy tung nóc.
-                            Code là đam
-                            mê,
-                            còn hát là
-                            liệu pháp chữa lành."
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-                                <img src="https://api.iconify.design/noto:full-moon-face.svg" alt="Moon"
-                                    class="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Mặt Trăng Khuya</h4>
-                                <p class="text-xs text-gray-400">Bạn tâm giao lúc code đêm</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
+                {% if mod == 0 %}
                 <div class="swiper-slide grid md:grid-cols-3 gap-8 pt-10 pb-10">
-                    <!-- Review 4 -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-green relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
-                        <div
-                            class="absolute -top-6 left-8 w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm">
-                            <i class="fas fa-bug"></i>
-                        </div>
-                        <p class="text-gray-600 italic mb-6 pt-4">
-                            "Châu là một lập trình viên rất kiên trì. Cô ấy có thể ngồi cả ngày chỉ để fix một cái bug
-                            do chính cô
-                            ấy
-                            tạo ra hôm qua. Mỗi lần debug là một hành trình xuyên không về quá khứ, tìm lại từng dòng
-                            code đã lỡ
-                            tay.
-                            Cái sự lì đó, cộng thêm tính không bỏ cuộc, khiến tôi – một con bug cứng đầu – cũng phải
-                            chịu thua. Có
-                            thể
-                            chưa phải lập trình viên giỏi nhất, nhưng chắc chắn là người 'nuôi bug' tận tâm nhất. Rất
-                            đáng được bảo
-                            tồn."
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-                                <img src="https://api.iconify.design/noto:lady-beetle.svg" alt="Bug"
-                                    class="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 text-sm">
-                                    Con Bug Cứng Đầu
-                                </h4>
-                                <p class="text-xs text-gray-400">Bạn tri kỷ</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endif %}
 
-                    <!-- Review 5 -->
                     <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-red relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
+                        class="bg-white px-8 pb-8 pt-12 rounded-2xl shadow-lg border-t-4 border-{{ review.borderColor }} relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
                         <div
-                            class="absolute -top-6 left-8 w-12 h-12 bg-brand-red rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm">
-                            <i class="fas fa-cat"></i>
+                            class="absolute -top-6 left-8 w-12 h-12 bg-{{ review.iconColor }} rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm">
+                            <i class="{{ review.icon }}"></i>
                         </div>
-                        <p class="text-gray-600 italic mb-6 pt-4">
-                            "Meo meo meo meo. (Dịch: Nhỏ Sen này nghèo lắm, pate của tôi nó còn chấm mút. Mỗi lần xin đồ
-                            ăn là y như
-                            mặc
-                            cả, ngửa mặt nhìn mà không chắc có được gì.) Nhưng mà... Sen rất ngoan, hay dọn khay cát và
-                            không dám
-                            trái ý
-                            tôi. Tối còn vuốt ve cho tôi ngủ nữa. Các bạn hãy donate cho chỉ đi, chứ để tôi chịu cảnh ăn
-                            cơm nguội
-                            thêm
-                            lần nữa là tôi sẽ meo tới sáng cho cả xóm biết chuyện!"
-                        </p>
+                        <p class="text-gray-600 italic mb-6 pt-4">{{ review.message | markdownify }}</p>
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-                                <img src="https://api.iconify.design/noto:cat-face.svg" alt="Cat"
+                                <img src="{{ review.img }}" alt="{{ review.altText }}"
                                     class="w-full h-full object-cover" />
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 text-sm">
-                                    Hoàng Thượng Mèo
-                                </h4>
-                                <p class="text-xs text-gray-400">Chủ nhà thực sự</p>
+                                <h4 class="font-bold text-gray-900 text-sm">{{ review.name }}</h4>
+                                <p class="text-xs text-gray-400">{{ review.subtitle }}</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Review 6 -->
-                    <div
-                        class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-gold relative hover:-translate-y-2 transition duration-300 h-full flex flex-col justify-between">
-                        <div
-                            class="absolute -top-6 left-8 w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center text-white text-2xl border-4 border-white shadow-sm">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <p class="text-gray-600 italic mb-6 pt-4">
-                            "Tôi chạy Chrome 50 tabs mà Châu không cho thêm RAM. Tôi nóng 90 độ mà Châu không bật điều
-                            hòa. Nhiều
-                            đêm
-                            tưởng được nghỉ ngơi, ai ngờ lại bị dựng dậy chỉ để chạy build ảo. Tôi đã từng là máy chiến,
-                            còn giờ là
-                            ‘cục
-                            gạch biết lập trình’. Nhưng tôi không giận, vì ít nhất, mỗi lần nhìn cô ấy cười khi chạy
-                            được một đoạn
-                            code,
-                            tôi cảm thấy mình vẫn còn giá trị. Giải cứu tôi với, hoặc ít nhất, hãy donate cho Châu để
-                            cho tôi được
-                            nâng
-                            cấp bớt tàn hơn!"
-                        </p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
-                                <img src="https://api.iconify.design/noto:laptop.svg" alt="Laptop"
-                                    class="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-900 text-sm">Chiếc Laptop Cũ</h4>
-                                <p class="text-xs text-gray-400">Công cụ kiếm cơm</p>
-                            </div>
-                        </div>
-                    </div>
+                    {% if mod == 2 or forloop.last %}
                 </div>
+                {% endif %}
+
+                {% endfor %}
             </div>
+
             <div class="swiper-pagination mt-10"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>

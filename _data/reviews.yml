@@ -1,0 +1,83 @@
+- icon: "fas fa-mug-hot"
+  iconColor: purple-600
+  borderColor: purple-600
+  message: >
+    Cô ấy sống nhờ cà phê và deadline. Đừng bao giờ lấy cà phê của Châu, trừ khi bạn muốn chứng kiến một cuộc đại chiến giữa con người và zombie lúc 3 giờ sáng. 
+    Một ngụm nhỏ cũng có thể kích hoạt chế độ code vô cực hoặc... shutdown toàn hệ thống.<br>
+    Ai tốt bụng xin hãy donate cho cô ấy một ly cà phê – ít ngọt, nhiều đắng, đắng chát tận tim nhưng lại hợp khẩu vị đến lạ thường. 
+    Đó không chỉ là caffeine, mà là sức mạnh tinh thần, là nguồn sống của bao dòng code đang dở dang...
+  img: "https://api.iconify.design/noto:hot-beverage.svg"
+  altText: "Coffee"
+  name: "Ly Cà Phê Sáng"
+  subtitle: "Nguồn sống mỗi ngày"
+
+- icon: "fas fa-user-ninja"
+  iconColor: lime-500
+  borderColor: lime-500
+  message: >
+    Nhỏ này code thì gà, hay lèm bèm cả ngày nhưng được cái không ngại làm phiền mình. 
+    Chuyên gia nợ task, bướng bỉnh, cứng đầu nhắc hoài không sửa.<br>
+    Tính cách hơi ngáo ngơ, nhưng lại biết điều, biết ơn và không bao giờ quay lưng với team. 
+    Là đứa đệ mà đại ka vừa đau đầu vừa không nỡ mắng. 
+    Ai nói gì xấu về nó thì bước ra đây, viên ngọc phòng data của tui đó! 
+    Anh em nào tốt bụng thì donate cho nó vài ly cà phê, để có sức… trả nợ task!
+  img: "https://api.iconify.design/noto:ninja.svg"
+  altText: "Ninja"
+  name: "Đại Ka"
+  subtitle: "Mentor truyền kỳ"
+
+- icon: "fas fa-cloud-moon"
+  iconColor: sky-500
+  borderColor: sky-500
+  message: >
+    Châu hay tâm sự với trăng mỗi đêm code tới 2 giờ sáng. 
+    Nếu bạn thấy GitHub commit lúc 3h, đó là lúc trăng đang gật gù, còn cô ấy thì vẫn chưa chịu ngủ.<br>
+    Ngoài giờ làm việc, Châu thường đi hát để xả stress – một cách giải tỏa rất nghệ sĩ. 
+    Đừng để vẻ ngoài lơ ngơ đánh lừa bạn, nhỏ này lên sân khấu là ‘cân’ mọi thể loại từ nhạc buồn não nề tới remix quẩy tung nóc. 
+    Code là đam mê, còn hát là liệu pháp chữa lành.
+  img: "https://api.iconify.design/noto:full-moon-face.svg"
+  altText: "Moon"
+  name: "Mặt Trăng Khuya"
+  subtitle: "Bạn tâm giao lúc code đêm"
+
+- icon: "fas fa-bug"
+  iconColor: brand-green
+  borderColor: brand-green
+  message: >
+    Châu là một lập trình viên rất kiên trì. Cô ấy có thể ngồi cả ngày chỉ để fix một cái bug do chính cô ấy tạo ra hôm qua. 
+    Mỗi lần debug là một hành trình xuyên không về quá khứ, tìm lại từng dòng code đã lỡ tay. 
+    Cái sự lì đó, cộng thêm tính không bỏ cuộc, khiến tôi – một con bug cứng đầu – cũng phải chịu thua. 
+    Có thể chưa phải lập trình viên giỏi nhất, nhưng chắc chắn là người 'nuôi bug' tận tâm nhất. 
+    Rất đáng được bảo tồn.
+  img: "https://api.iconify.design/noto:lady-beetle.svg"
+  altText: "Bug"
+  name: "Con Bug Cứng Đầu"
+  subtitle: "Bạn tri kỷ"
+
+- icon: "fas fa-cat"
+  iconColor: brand-red
+  borderColor: brand-red
+  message: >
+    Meo meo meo meo. (Dịch: Nhỏ Sen này nghèo lắm, pate của tôi nó còn chấm mút. 
+    Mỗi lần xin đồ ăn là y như mặc cả, ngửa mặt nhìn mà không chắc có được gì.)<br>
+    Nhưng mà... Sen rất ngoan, hay dọn khay cát và không dám trái ý tôi. 
+    Tối còn vuốt ve cho tôi ngủ nữa. 
+    Các bạn hãy donate cho chỉ đi, chứ để tôi chịu cảnh ăn cơm nguội thêm lần nữa là tôi sẽ meo tới sáng cho cả xóm biết chuyện!
+  img: "https://api.iconify.design/noto:cat-face.svg"
+  altText: "Cat"
+  name: "Hoàng Thượng Mèo"
+  subtitle: "Chủ nhà thực sự"
+
+- icon: "fas fa-laptop-code"
+  iconColor: lime-500
+  borderColor: lime-500
+  message: >
+    Tôi chạy Chrome 50 tabs mà Châu không cho thêm RAM. Tôi nóng 90 độ mà Châu không bật điều hòa. 
+    Nhiều đêm tưởng được nghỉ ngơi, ai ngờ lại bị dựng dậy chỉ để chạy build ảo. 
+    Tôi đã từng là máy chiến, còn giờ là ‘cục gạch biết lập trình’.<br>
+    Nhưng tôi không giận, vì ít nhất, mỗi lần nhìn cô ấy cười khi chạy được một đoạn code, tôi cảm thấy mình vẫn còn giá trị. 
+    Giải cứu tôi với, hoặc ít nhất, hãy donate cho Châu để cho tôi được nâng cấp bớt tàn hơn!
+  img: "https://api.iconify.design/noto:laptop.svg"
+  altText: "Laptop"
+  name: "Chiếc Laptop Cũ"
+  subtitle: "Công cụ kiếm cơm"
