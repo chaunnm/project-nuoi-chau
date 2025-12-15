@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dự Án Nuôi Châu - Phiên Bản Giáng Sinh</title>
+  <title>Dự Án Nuôi {{ site.author }} - Phiên Bản Giáng Sinh</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Nunito:wght@400;700&display=swap"
@@ -293,7 +293,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center relative">
       <a href="#" class="text-2xl font-bold text-brand-red flex items-center gap-2 relative group">
         <span class="text-3xl">🎅</span>
-        <span class="group-hover:text-brand-green transition-colors">Nuôi Châu</span>
+        <span class="group-hover:text-brand-green transition-colors">Nuôi {{ site.author }}</span>
       </a>
       <div class="hidden md:flex space-x-6 font-bold text-gray-600">
         <a href="#ve-du-an" class="hover:text-brand-red transition">Về Dự Án</a>
@@ -351,7 +351,7 @@
       </span>
       <div class="relative inline-block">
         <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
-          Hãy trao cho Châu <br />
+          Hãy trao cho {{ site.author }} <br />
           <span class="text-brand-red font-hand">Một cốc cacao nóng</span>
         </h1>
         <!-- Santa Hat Decor -->
@@ -360,7 +360,7 @@
       </div>
 
       <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-        Noel này Châu không cô đơn, nhưng Châu không muốn bị đói. Hãy giúp Châu
+        Noel này {{ site.author }} không cô đơn, nhưng {{ site.author }} không muốn bị đói. Hãy giúp {{ site.author }}
         có sức lực để chạy deadline xuyên đêm Giáng Sinh.
       </p>
 
@@ -415,7 +415,7 @@
       <div class="flex flex-col md:flex-row gap-4 justify-center">
         <button onclick="openCustomInput()"
           class="bg-brand-green text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-green-900/20 hover:-translate-y-1 transition hover:bg-green-700">
-          <i class="fas fa-snowflake mr-2"></i> Sưởi ấm tim Châu
+          <i class="fas fa-snowflake mr-2"></i> Sưởi ấm tim {{ site.author }}
         </button>
         <a href="#ve-du-an"
           class="bg-white text-gray-700 border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-brand-red hover:text-brand-red transition">
@@ -453,12 +453,12 @@
             Bắt đầu từ ngày hôm nay, tôi xin phép long trọng ra mắt dự án
             <span class="bg-brand-red text-white px-2 py-1 rounded transform rotate-2 inline-block font-bold">"Nuôi
               Tôi"</span>
-            (phiên bản giới hạn tên là Châu).
+            (phiên bản giới hạn tên là {{ site.author }}).
           </p>
 
           <p>
             Giữa bão giá thị trường, giá xăng tăng, giá vàng nhảy múa, chỉ có
-            lương tâm của Châu là vẫn trong sáng (và ví thì trống rỗng). 💸
+            lương tâm của {{ site.author }} là vẫn trong sáng (và ví thì trống rỗng). 💸
           </p>
 
           <!-- Quote nổi bật -->
@@ -477,7 +477,7 @@
 
           <p>
             Tôi hứa sẽ update story đầy đủ mỗi khi được ăn ngon để các bạn
-            thấy tiền của mình đã giúp Châu béo tốt lên như thế nào. Xin chân
+            thấy tiền của mình đã giúp {{ site.author }} béo tốt lên như thế nào. Xin chân
             thành cảm ơn! 🙏
           </p>
 
@@ -487,7 +487,7 @@
             <span class="text-gray-400 text-base font-sans italic">(Ký tên đóng dấu bằng mồ hôi và nước mắt)</span>
             <div
               class="font-hand text-4xl text-brand-red font-bold -rotate-6 border-4 border-double border-brand-red p-4 rounded-lg inline-block transform hover:scale-110 transition bg-white shadow-lg">
-              Châu (Đã Đói) 🍖
+              {{ site.author }} (Đã Đói) 🍖
             </div>
           </div>
         </div>
@@ -546,7 +546,7 @@
           </p>
           <ul class="text-sm space-y-2 mb-6 text-gray-300">
             <li>
-              <i class="fas fa-check text-brand-green mr-2"></i> Châu ấm bụng
+              <i class="fas fa-check text-brand-green mr-2"></i> {{ site.author }} ấm bụng
             </li>
             <li>
               <i class="fas fa-check text-brand-green mr-2"></i> Chúc Giáng
@@ -680,7 +680,7 @@
 
             <!-- Ghi chú footer -->
             <div class="mt-6 pt-2 text-gray-400 text-sm italic text-center md:text-left">
-              *Số liệu được kiểm toán bởi... chính Châu.
+              *Số liệu được kiểm toán bởi... chính {{ site.author }}.
             </div>
           </div>
         </div>
@@ -694,7 +694,7 @@
       <div class="text-center mb-16">
         <span class="text-brand-green font-bold tracking-wider uppercase text-sm">Review Cực Chân Thực</span>
         <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
-          Cộng Đồng Nói Gì Về Châu?
+          Cộng Đồng Nói Gì Về {{ site.author }}?
         </h2>
         <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
       </div>
@@ -713,7 +713,8 @@
                 <i class="fas fa-mug-hot"></i>
               </div>
               <p class="text-gray-600 italic mb-6 pt-4">
-                "Cô ấy sống nhờ cà phê và deadline. Đừng bao giờ lấy cà phê của Châu, trừ khi bạn muốn chứng kiến một
+                "Cô ấy sống nhờ cà phê và deadline. Đừng bao giờ lấy cà phê của {{ site.author }}, trừ khi bạn muốn
+                chứng kiến một
                 cuộc
                 đại chiến
                 giữa con người và zombie lúc 3 giờ sáng. Một ngụm nhỏ cũng có thể kích hoạt chế độ code vô cực hoặc...
@@ -772,11 +773,13 @@
                 <i class="fas fa-cloud-moon"></i>
               </div>
               <p class="text-gray-600 italic mb-6 pt-4">
-                "Châu hay tâm sự với trăng mỗi đêm code tới 2 giờ sáng. Nếu bạn thấy GitHub commit lúc 3h, đó là lúc
+                "{{ site.author }} hay tâm sự với trăng mỗi đêm code tới 2 giờ sáng. Nếu bạn thấy GitHub commit lúc 3h,
+                đó là lúc
                 trăng
                 đang gật
                 gù, còn cô ấy thì vẫn chưa chịu ngủ.<br>
-                Ngoài giờ làm việc, Châu thường đi hát để xả stress – một cách giải tỏa rất nghệ sĩ. Đừng để vẻ ngoài lơ
+                Ngoài giờ làm việc, {{ site.author }} thường đi hát để xả stress – một cách giải tỏa rất nghệ sĩ. Đừng
+                để vẻ ngoài lơ
                 ngơ
                 đánh lừa
                 bạn, nhỏ này lên sân khấu là ‘cân’ mọi thể loại từ nhạc buồn não nề tới remix quẩy tung nóc. Code là đam
@@ -807,7 +810,8 @@
                 <i class="fas fa-bug"></i>
               </div>
               <p class="text-gray-600 italic mb-6 pt-4">
-                "Châu là một lập trình viên rất kiên trì. Cô ấy có thể ngồi cả ngày chỉ để fix một cái bug do chính cô
+                "{{ site.author }} là một lập trình viên rất kiên trì. Cô ấy có thể ngồi cả ngày chỉ để fix một cái bug
+                do chính cô
                 ấy
                 tạo ra hôm qua. Mỗi lần debug là một hành trình xuyên không về quá khứ, tìm lại từng dòng code đã lỡ
                 tay.
@@ -868,13 +872,15 @@
                 <i class="fas fa-laptop-code"></i>
               </div>
               <p class="text-gray-600 italic mb-6 pt-4">
-                "Tôi chạy Chrome 50 tabs mà Châu không cho thêm RAM. Tôi nóng 90 độ mà Châu không bật điều hòa. Nhiều
+                "Tôi chạy Chrome 50 tabs mà {{ site.author }} không cho thêm RAM. Tôi nóng 90 độ mà {{ site.author }}
+                không bật điều hòa. Nhiều
                 đêm
                 tưởng được nghỉ ngơi, ai ngờ lại bị dựng dậy chỉ để chạy build ảo. Tôi đã từng là máy chiến, còn giờ là
                 ‘cục
                 gạch biết lập trình’. Nhưng tôi không giận, vì ít nhất, mỗi lần nhìn cô ấy cười khi chạy được một đoạn
                 code,
-                tôi cảm thấy mình vẫn còn giá trị. Giải cứu tôi với, hoặc ít nhất, hãy donate cho Châu để cho tôi được
+                tôi cảm thấy mình vẫn còn giá trị. Giải cứu tôi với, hoặc ít nhất, hãy donate cho {{ site.author }} để
+                cho tôi được
                 nâng
                 cấp bớt tàn hơn!"
               </p>
@@ -977,7 +983,7 @@
           <h3 class="text-3xl font-bold text-brand-red mb-3">Merry Christmas!</h3>
           <p class="text-gray-700 text-lg leading-relaxed">
             Bạn vừa trở thành<br />
-            <span class="font-bold text-brand-red text-xl">Nhà Tài Trợ Huyền Thoại của Châu 🎁</span><br />
+            <span class="font-bold text-brand-red text-xl">Nhà Tài Trợ Huyền Thoại của {{ site.author }} 🎁</span><br />
             <span class="text-sm text-gray-500 italic">Không ai khác, chính bạn đã cứu lấy ngày lễ này 😇</span>
           </p>
 
@@ -1000,7 +1006,7 @@
   <footer class="bg-gray-900 text-white py-10 text-center border-t-4 border-brand-red">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold mb-4 font-hand text-brand-red flex justify-center items-center gap-2">
-        <i class="fas fa-candy-cane"></i> Nuôi Châu Project
+        <i class="fas fa-candy-cane"></i> Nuôi {{ site.author }} Project
       </h2>
       <p class="text-gray-400 mb-4">
         Website này được tạo ra để vui là chính (nhưng donate là thật).
@@ -1012,13 +1018,13 @@
           <span class="font-bold text-gray-500">⚠️ Miễn trừ trách nhiệm:</span>
           Nội dung trên website chỉ mang tính chất giải trí, hài hước nhằm mục
           đích tạo tiếng cười mùa Giáng Sinh. Mọi sự giống nhau ngoài đời thật
-          hoàn toàn do… Châu vô tình viết nhầm. Vui lòng đón nhận với tinh thần
+          hoàn toàn do… {{ site.author }} vô tình viết nhầm. Vui lòng đón nhận với tinh thần
           vui vẻ kẻo Noel buồn! 🎄
         </p>
       </div>
 
       <div class="border-t border-gray-800 pt-6 text-sm text-gray-500">
-        &copy; 2024 Nuôi Châu. Merry Christmas! 🎄
+        &copy; 2024 Nuôi {{ site.author }}. Merry Christmas! 🎄
       </div>
     </div>
   </footer>
@@ -1158,7 +1164,7 @@
       "Ho Ho Ho! Cảm ơn Santa Claus! 🎅",
       "Món quà này ấm hơn cả lò sưởi! 🔥",
       "Chúc bạn Giáng Sinh an lành và ví tiền rủng rỉnh! 🎄",
-      "Châu đã nhận được tín hiệu từ Bắc Cực! ❄️",
+      "{{ site.author }} đã nhận được tín hiệu từ Bắc Cực! ❄️",
       "Yêu thương bay tung tóe như pháo hoa đêm Noel! ✨",
     ];
 

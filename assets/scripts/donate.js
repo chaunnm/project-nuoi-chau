@@ -3,7 +3,7 @@
     "Ho Ho Ho! Cảm ơn Santa Claus! 🎅",
     "Món quà này ấm hơn cả lò sưởi! 🔥",
     "Chúc bạn Giáng Sinh an lành 🎄",
-    "Châu đã nhận được tín hiệu từ Bắc Cực ❄️",
+    "{{ site.author }} đã nhận được tín hiệu từ Bắc Cực ❄️",
   ];
 
   let currentTimeout;

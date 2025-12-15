@@ -14,7 +14,7 @@
         </span>
         <div class="relative inline-block">
             <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
-                Hãy trao cho Châu <br />
+                Hãy trao cho {{ site.author }} <br />
                 <span class="text-brand-red font-hand">Một cốc cacao nóng</span>
             </h1>
             <!-- Santa Hat Decor -->
@@ -23,7 +23,8 @@
         </div>
 
         <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Noel này Châu không cô đơn, nhưng Châu không muốn bị đói. Hãy giúp Châu
+            Noel này {{ site.author }} không cô đơn, nhưng {{ site.author }} không muốn bị đói. Hãy giúp {{ site.author
+            }}
             có sức lực để chạy deadline xuyên đêm Giáng Sinh.
         </p>
 
@@ -79,7 +80,7 @@
         <div class="flex flex-col md:flex-row gap-4 justify-center">
             <button onclick="openCustomInput()"
                 class="bg-brand-green text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-green-900/20 hover:-translate-y-1 transition hover:bg-green-700">
-                <i class="fas fa-snowflake mr-2"></i> Sưởi ấm tim Châu
+                <i class="fas fa-snowflake mr-2"></i> Sưởi ấm tim {{ site.author }}
             </button>
             <a href="#ve-du-an"
                 class="bg-white text-gray-700 border-2 border-gray-200 px-8 py-4 rounded-xl font-bold text-lg hover:border-brand-red hover:text-brand-red transition">
