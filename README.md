@@ -56,7 +56,7 @@ You should see your festive "Nuôi Châu" website running locally.
 
 ### 🔸 Change Author Name
 
-Edit file: `\_config.yml`
+Edit file: `_config.yml`
 
 ```bash
 author: Chau
@@ -81,7 +81,7 @@ const xmasQuotes = [
 ];
 ```
 
-### 🔸 (Recommended) Customize Content via `\_data/\*.yml`
+### 🔸 (Recommended) Customize Content via `_data/*.yml`
 
 Instead of hardcoding text in HTML or JavaScript, Jekyll allows you to store global data inside the `_data/` folder.
 
