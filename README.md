@@ -56,7 +56,7 @@ You should see your festive "Nuôi Châu" website running locally.
 
 ### 🔸 Change Author Name
 
-Edit file: \_config.yml
+Edit file: `\_config.yml`
 
 ```bash
 author: Chau
@@ -70,7 +70,7 @@ Use anywhere in HTML:
 
 ### 🔸 Update Quotes for Donation Modal
 
-Edit xmasQuotes are used in assets/scripts/donate.js
+Edit xmasQuotes are used in `assets/scripts/donate.js`
 
 ```bash
 const xmasQuotes = [
@@ -79,6 +79,18 @@ const xmasQuotes = [
     "Chúc bạn Giáng Sinh an lành 🎄",
     "Châu đã nhận được tín hiệu từ Bắc Cực ❄️",
 ];
+```
+
+### 🔸 (Recommended) Customize Content via `\_data/\*.yml`
+
+Instead of hardcoding text in HTML or JavaScript, Jekyll allows you to store global data inside the `_data/` folder.
+
+```bash
+_data/
+├── finance.yml
+├── hall-of-fame.yml
+├── pricing.yml
+└── reviews.yml
 ```
 
 ---
@@ -92,3 +104,7 @@ MIT License – feel free to fork and decorate your own version!
 ---
 
 ## 🙋 Contact
+
+Created with ❤️ by Châu.
+
+Merry Christmas and Happy Holidays! 🎄🎁
