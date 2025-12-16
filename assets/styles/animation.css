@@ -1,0 +1,39 @@
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.wiggle-hover:hover {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop {
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.santa-hat {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  transform: rotate(-15deg);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+  z-index: 10;
+}

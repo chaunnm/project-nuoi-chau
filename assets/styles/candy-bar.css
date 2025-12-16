@@ -1,0 +1,23 @@
+/* --- MỚI: HIỆU ỨNG THANH TRẠNG THÁI CANDY CANE --- */
+@keyframes slideStripe {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 30px 0;
+  }
+}
+
+.candy-cane-bar {
+  /* Hiệu ứng sọc chéo giống kẹo gậy */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  background-size: 30px 30px;
+  animation: slideStripe 1s linear infinite;
+}

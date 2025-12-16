@@ -1,0 +1,8 @@
+body {
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
